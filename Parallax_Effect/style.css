@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Delius&family=DynaPuff:wght@400..700&family=Protest+Guerrilla&display=swap');
+/* google fonts
+font-family: "Protest Guerrilla", sans-serif;
+font-family: "DynaPuff", system-ui;
+font-family: "Delius", cursive;
+*/
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar{
+    width: 0px;
+}
+
+a, a:active, a:visited{
+text-decoration: none;
+color: white;
+} /*h2 yazısına tıklasan da tıklamasan da renk beyaz*/
+
+ul{
+list-style: none;
+}
+
+
+body{
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+}
+
+/* topbar başlangıç*/
+.topbar{
+    position: absolute;
+    width: 100%;
+    height: 60px;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.topbar .wrapper{
+    width: 90%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.topbar ul{
+    display: flex;
+    gap: 20px;
+    font-size: 1.2rem;
+    font-family: monospace;
+    font-weight: 700;
+}
+.topbar ul li{
+    padding: 3px 8px;
+    background-color: transparent;
+    border-radius: 10px;
+}
+
+.topbar ul li.active{
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.topbar h2{
+    font-size: 2rem;
+    font-family: "Protest Guerrilla", sans-serif;
+}
+
+
+/* topbar bitiş*/
+
+/* home başlangıç*/
+#home{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+}
+
+#home img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    transform: scale(1.2);
+}
+
+#text{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12vw;
+    text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5), 
+                 0px 0px 10px rgba(255, 255, 255, 0.5), 
+                 0px 0px 15px rgba(255, 255, 255, 0.5);
+                
+    transform: translateY(350px);     
+    font-family: "Protest Guerrilla", sans-serif;
+    letter-spacing: 5px;        
+}
+/* home bitiş*/
+
+/* article başlangıç*/
+#about{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    background: linear-gradient( 130deg,#08070b, #1c0f08);
+    color: white;
+}
+#about .wrapper{
+    width: 90%;
+    max-width: 1300px;
+}
+
+#about h2{
+    font-size: 2.3rem;
+    font-family: "DynaPuff", system-ui;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#about p{
+    font-size: 1.3rem;
+    font-family: "Delius", cursive;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 27;
+    -webkit-box-orient: vertical;
+}
+
+/* article bitiş*/
+
+
+/* up_and_down başlangıç */
+
+#up_and_down{
+    position: fixed;
+    left: 0px;
+    bottom: 50px;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: all 0.4s;
+}
+
+#up_and_down .wrapper{
+    width: 95%;
+    height: 100%;
+    max-width: 1350px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+}
+
+#up_and_down a{
+    width: 50px;
+    height: 50px;
+    clip-path: polygon(51% 0, 76% 54%, 67% 100%, 38% 100%, 28% 55%);
+    background-color: white;
+    animation: up_and_down infinite alternate 1s ease-in-out;
+}
+
+@keyframes up_and_down{
+    0%{
+        transform: translateY(-30px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+/* up_and_down bitiş */
